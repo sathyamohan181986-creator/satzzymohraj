@@ -13,7 +13,7 @@ Screenshots are attached **after every keyword** using testInfo.attach(...) + pa
 ## Put files here
 ```
 ./data/TestScript.xlsx      # sheet: Test_Script
-./data/Data.xlsx            # sheets: Data, HR_Regression, ...
+./data/Data.xlsx            # sheets: Data ...
 ```
 
 ## Run

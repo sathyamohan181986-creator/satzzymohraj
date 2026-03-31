@@ -1,15 +1,18 @@
 import { Page } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
+import { url } from 'inspector';
 
 export class LoginActions {
   constructor(private page: Page) {}
 
-  async login(username: string, password: string) {
+  async login(url: string, username: string, password: string) {
     const loginPage = new LoginPage(this.page);
 
-    await loginPage.navigate();
+    await loginPage.navigate(url);
     await loginPage.enterUsername(username);
+    console.log("Username entered", username);
     await loginPage.enterPassword(password);
+    console.log("Password entered", password);
     await loginPage.selectCheckbox();
     await loginPage.clickSignIn();
   }

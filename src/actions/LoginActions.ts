@@ -14,6 +14,8 @@ export class LoginActions {
     await loginPage.enterPassword(password);
     console.log("Password entered", password);
     await loginPage.selectCheckbox();
+    console.log("Checkbox selected");
     await loginPage.clickSignIn();
+    console.log("Sign in button clicked");
   }
 }

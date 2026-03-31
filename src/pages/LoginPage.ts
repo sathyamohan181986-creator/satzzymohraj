@@ -4,8 +4,9 @@ import { LoginLocators } from '../locators/Login';
 export class LoginPage {
   constructor(private page: Page) {}
 
-  async navigate() {
-    await this.page.goto('https://rahulshettyacademy.com/loginpagePractise/');
+
+  async navigate(url: string) {
+    await this.page.goto(url);
   }
 
   async enterUsername(username: string) {
